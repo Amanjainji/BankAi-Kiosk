@@ -85,7 +85,7 @@ const ESCALATION_TRIGGERS = ['complaint', 'fraud', 'angry', 'not satisfied', 'hu
 export default function VoiceBotScreen() {
   const navigate = useNavigate();
   const { language } = useApp();
-  const { isListening, startListening, stopListening, speak, cancelSpeech } = useVoice(language);
+  const { isListening, startListening, speak } = useVoice(language);
   const lbl = getT(language);
 
   const [phase, setPhase]           = useState(0);
@@ -117,8 +117,7 @@ export default function VoiceBotScreen() {
   const endCall = () => {
     clearInterval(timerRef.current);
     setCallActive(false);
-    stopListening();
-    cancelSpeech();
+    speak('', language);
   };
 
   const advancePhase = () => {

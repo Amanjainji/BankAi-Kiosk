@@ -39,7 +39,7 @@ const detectSimpleIntent = (text = '') => {
 
 export default function DeskAIScreen() {
   const { language } = useApp();
-  const { isListening, startListening, stopListening, speak } = useVoice(language);
+  const { isListening, startListening, speak } = useVoice(language);
   const lbl = getT(language);
 
   const [inputText, setInputText] = useState('');
@@ -69,10 +69,6 @@ export default function DeskAIScreen() {
   };
 
   const handleVoice = () => {
-    if (isListening) {
-      stopListening();
-      return;
-    }
     startListening((transcript) => {
       setInputText(transcript);
       processRequest(transcript);
