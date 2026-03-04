@@ -1,4 +1,4 @@
-# Deployment Guide: Bank AI Platform
+# Deployment Guide: RamSetu Platform
 
 This guide explains how to deploy the **AI-Powered Unified Self-Service Platform** MVP. Since the application consists of a separate Vite-based React frontend and a Node.js/Express backend, we will deploy them to two different platforms:
 
@@ -12,6 +12,7 @@ This guide explains how to deploy the **AI-Powered Unified Self-Service Platform
 Render is an excellent platform for hosting Node.js applications for free or at a low cost.
 
 ### Prerequisites
+
 - Push your code to a GitHub repository.
 - Ensure your `backend/package.json` has a `start` script:
   ```json
@@ -22,6 +23,7 @@ Render is an excellent platform for hosting Node.js applications for free or at 
   ```
 
 ### Steps to Deploy on Render
+
 1. Go to [Render.com](https://render.com/) and sign in with GitHub.
 2. Click **New +** and select **Web Service**.
 3. Connect your GitHub repository containing this project.
@@ -35,7 +37,7 @@ Render is an excellent platform for hosting Node.js applications for free or at 
    - `PORT`: `5000`
    - `JWT_SECRET`: `your_super_secret_jwt_key`
    - `FRONTEND_URL`: The URL of your future Vercel deployment (e.g., `https://bank-ai-frontend.vercel.app`) to configure CORS properly.
-6. Click **Create Web Service**. 
+6. Click **Create Web Service**.
 7. Once deployed, Render will give you a URL (e.g., `https://bank-ai-backend.onrender.com`). **Save this URL for the frontend setup.**
 
 ---
@@ -45,14 +47,16 @@ Render is an excellent platform for hosting Node.js applications for free or at 
 Vercel is the best place to host Vite/React applications.
 
 ### Prerequisites
-- In your frontend code, ensure API calls point to the backend URL using an environment variable. 
+
+- In your frontend code, ensure API calls point to the backend URL using an environment variable.
   Create an `.env` file in the `frontend` folder (locally) for testing:
   ```env
   VITE_API_URL=http://localhost:5000/api
   ```
-  *Make sure your API calls in the code use `import.meta.env.VITE_API_URL` instead of hardcoding `http://localhost:5000/api`.*
+  _Make sure your API calls in the code use `import.meta.env.VITE_API_URL` instead of hardcoding `http://localhost:5000/api`._
 
 ### Steps to Deploy on Vercel
+
 1. Go to [Vercel.com](https://vercel.com/) and sign in with GitHub.
 2. Click **Add New...** -> **Project**.
 3. Import your GitHub repository.
@@ -60,7 +64,7 @@ Vercel is the best place to host Vite/React applications.
    - **Project Name**: `bank-ai-frontend`
    - **Framework Preset**: `Vite`
    - **Root Directory**: `frontend` (Click edit and select the `frontend` folder).
-5. **Environment Variables**: 
+5. **Environment Variables**:
    - Name: `VITE_API_URL`
    - Value: `https://bank-ai-backend.onrender.com/api` (Use the URL you got from Render in Step 1).
 6. Click **Deploy**.
@@ -73,11 +77,13 @@ Vercel is the best place to host Vite/React applications.
 Currently, the MVP uses an in-memory or mock database. For a production-ready application, you should use a real PostgreSQL database.
 
 **Recommended Free PostgreSQL Hosts:**
+
 - [Supabase](https://supabase.com/)
 - [Neon](https://neon.tech/)
 - [Render PostgreSQL](https://render.com/docs/databases)
 
 **Integration Steps:**
+
 1. Create a database on one of the above platforms.
 2. Obtain the Connection String (URI).
 3. In your Render Backend Environment Variables, add:

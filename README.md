@@ -86,6 +86,9 @@ npm run dev
 ```
 *The app will be available at `http://localhost:5173`.*
 
+> **Important for Production Deployment:**
+> If you deploy the frontend (e.g., to Vercel or Netlify), you MUST set an environment variable named `VITE_API_URL` to point to your deployed backend URL (e.g., `VITE_API_URL=https://my-backend.onrender.com`). Otherwise, the frontend will try to connect to `localhost:5001`!
+
 ---
 
 ## Testing Scenarios
