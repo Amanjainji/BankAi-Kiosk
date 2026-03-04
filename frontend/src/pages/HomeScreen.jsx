@@ -208,7 +208,7 @@ const HomeScreen = () => {
       <div style={{ position: "relative", overflow: "hidden", minHeight: 420 }}>
         {/* Background image */}
         <img
-          src="/bank_kiosk_hero.png"
+          src="/bank_kiosk_hero2.png"
           alt="Ramsetu Branch"
           style={{
             position: "absolute",
