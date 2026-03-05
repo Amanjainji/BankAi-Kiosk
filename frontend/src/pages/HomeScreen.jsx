@@ -145,7 +145,7 @@ const UI_LABELS = {
     dashboard: "Agent Dashboard",
   },
   hi: {
-    title: "AI बैंकिंग प्लेटफॉर्म",
+    title: "रामसेतु प्लेटफॉर्म",
     subtitle: "स्मार्ट सेल्फ-सर्विस बैंकिंग — कभी भी, कहीं भी",
     selectLang: "भाषा चुनें",
     a11y: "पहुँच",

@@ -234,7 +234,7 @@ const makeResponses = ({
 const RESPONSES = {
   en: makeResponses({
     greeting:
-      "Hello! I am your AI banking assistant. How can I help you? I can check your balance, show statements, block cards, help with loans, or file complaints.",
+      "Hello! I am your Ramsetu assistant. How can I help you? I can check your balance, show statements, block cards, help with loans, or file complaints.",
     farewell: "Thank you for using RamSetu. Have a wonderful day!",
     unknown:
       "I didn't quite understand that. You can ask me about your balance, transactions, card blocking, loans, or file a complaint.",
@@ -259,7 +259,7 @@ const RESPONSES = {
   }),
   hi: makeResponses({
     greeting:
-      "नमस्ते! मैं आपका AI बैंकिंग सहायक हूँ। मैं बैलेंस, स्टेटमेंट, कार्ड ब्लॉकिंग, लोन या शिकायत में मदद कर सकता हूँ।",
+      "नमस्ते! मैं आपका रामसेतु सहायक हूँ। मैं बैलेंस, स्टेटमेंट, कार्ड ब्लॉकिंग, लोन या शिकायत में मदद कर सकता हूँ।",
     farewell: "RamSetu का उपयोग करने के लिए धन्यवाद। आपका दिन शुभ हो!",
     unknown:
       "मुझे यह समझ नहीं आया। बैलेंस, लेनदेन, कार्ड ब्लॉकिंग, लोन या शिकायत के बारे में पूछें।",

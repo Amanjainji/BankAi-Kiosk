@@ -143,7 +143,7 @@ const ChatScreen = () => {
 
   const GREETINGS = {
     en: `Hello ${customer?.name?.split(" ")[0] || ""}! I'm your Ramsetu Assistant. How can I help you today?`,
-    hi: `नमस्ते ${customer?.name?.split(" ")[0] || ""}! मैं आपका AI बैंकिंग सहायक हूँ। आज मैं आपकी कैसे मदद कर सकता हूँ?`,
+    hi: `नमस्ते ${customer?.name?.split(" ")[0] || ""}! मैं आपका रामसेतु सहायक हूँ। आज मैं आपकी कैसे मदद कर सकता हूँ?`,
     bn: `নমস্কার ${customer?.name?.split(" ")[0] || ""}! আমি আপনার AI ব্যাংকিং সহকারী। কীভাবে সাহায্য করতে পারি?`,
     ta: `வணக்கம் ${customer?.name?.split(" ")[0] || ""}! நான் உங்கள் AI வங்கி உதவியாளர். எவ்வாறு உதவலாம்?`,
     te: `నమస్కారం ${customer?.name?.split(" ")[0] || ""}! నేను మీ AI బ్యాంకింగ్ సహాయకుడని. ఎలా సహాయపడగలను?`,
