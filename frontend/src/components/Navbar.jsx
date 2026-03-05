@@ -44,7 +44,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <Link to="/" className="navbar-brand">
-        <div className="navbar-logo">B</div>
+        <div className="navbar-logo">🏦</div>
         <div>
           <div>RamSetu Platform</div>
           <div
